@@ -24,8 +24,14 @@ Vue.component('navbar-item', {
 var footerApp = new Vue({
 	el: '#footerApp',
 	data: {
-		largeContact:{class:"col-6 col-sm-4 offset-md-1 py-4 d-none d-md-block", ulclass:"list-unstyled d-flex py-2"},
-		smallContact:{class:"col-6 col-sm-4 offset-md-1 py-4 d-block d-md-none mx-auto text-center", ulclass:"list-unstyled d-flex px-2 py-2 mx-auto justify-content-between"},
+		largeContact:{
+			class:"col-6 col-sm-4 offset-md-1 py-4 d-none d-md-block", 
+			ulclass:"list-unstyled d-flex py-2"
+		},
+		smallContact:{
+			class:"col-6 col-sm-4 offset-md-1 py-4 d-block d-md-none mx-auto text-center", 
+			ulclass:"list-unstyled d-flex px-2 py-2 mx-auto justify-content-between"
+		},
 		brandList: [
 			{ id: 0, link: 'https://github.com/liuhualin333/', afclass:"fab fa-github" },
 			{ id: 1, link: 'https://www.linkedin.com/in/visionaryliu/', afclass:"fab fa-linkedin" },
@@ -43,9 +49,3 @@ var contactApp = new Vue({
 		]
 	}
 })
-function resizeImage() {
-    //calculations here...
-
-}
-
-window.addEventListener('resize', resizeImage, false);
