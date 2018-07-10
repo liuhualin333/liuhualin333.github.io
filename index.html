@@ -1,82 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-	<title>Hualin's Blog</title>
+		<title>Hualin's Blog</title>
 
-	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="./css/all.css">
-	<!-- Customized page CSS -->
-	<link rel="stylesheet" href="./css/index.css">
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script defer src="./js/all.js"></script>
-</head>
-<body>
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-		<div class="container">
-			<a href="#" class="navbar-brand">
-				<strong>Hualin Liu</strong>
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div id="navbarCollapse" class="collapse navbar-collapse">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a class="nav-link" href="./cv.html" class="text-white">Curriculum Vitae</a></li>
-					<li class="nav-item"><a class="nav-link" href="./blog.html" class="text-white">Articles</a></li>
-				</ul>
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="./css/all.css">
+		<!-- Customized page CSS -->
+		<link rel="stylesheet" href="./css/index.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script defer src="./js/all.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navbarItemApp">
+			<div class="container">
+				<a href="#" class="navbar-brand">
+					<strong>{{name}}</strong>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div id="navbarCollapse" class="collapse navbar-collapse">
+					<ul class="navbar-nav mr-auto">
+						<navbar-item v-for="item in itemList" v-bind:item="item" v-bind:key="item.id"></navbar-item>
+					</ul>
+				</div>
 			</div>
-		</div>
-    </nav>
-	<main role="main" class="container">
-		<section class="jumbotron text-center">
-			<h1 id="app">
-				Welcome to Hualin's Blog!
-			</h1>
-			<p class="text-muted">
-				Website Under Construction...
-			</p>
-		</section>
-	</main>
-	<footer class="footer bg-dark text-white">
-      <div class="container">
-		  <div class="row">
-		    <div class="col-sm-8 col-md-7 py-4">
-		      <h4 class="text-white">About Me</h4>
-		      <p class="text-muted py-2">Diligent Programmer, Deep Learner, Travel Lover.</p>
-		    </div>
-		    <div class="col-sm-4 offset-md-1 py-4">
-		      <h4 class="text-white">Contact</h4>
-		      <ul class="list-unstyled d-flex py-2">
-		        <li class="pr-4">
-			        <a href="https://github.com/liuhualin333/">
-					   <span class="fab fa-github" style="font-size:36px;color:white"></span>
-					</a>
-				</li>
-				<li class="pr-4">
-			        <a href="https://www.linkedin.com/in/visionaryliu/">
-					   <span class="fab fa-linkedin" style="font-size:36px;color:white"></span>
-					</a>
-				</li>
-				<li class="pr-4">
-			        <a href="mailto:liuhualin333@gmail.com">
-					   <span class="fas fa-envelope" style="font-size:36px;color:white"></span>
-					</a>
-				</li>
-		      </ul>
-		    </div>
-		  </div>
-		</div>
-    </footer>
-	<script src="./js/index.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-</body>
+		</nav>
+		<main role="main" class="container">
+			<section class="jumbotron text-center">
+				<h1>
+					Welcome to Hualin's Blog!
+				</h1>
+				<p class="text-muted">
+					Website Under Construction...
+				</p>
+			</section>
+		</main>
+		<footer class="footer bg-dark text-white" id="footerApp">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-md-7 py-4 d-none d-md-block">
+						<h4 class="text-white">About Me</h4>
+						<p class="text-muted py-2">Diligent Programmer, Deep Learner, Travel Lover.</p>
+					</div>
+					<div class="col-6 col-sm-4 offset-md-1 py-4 d-none d-md-block">
+						<h4 class="text-white">Contact Me</h4>
+						<ul class="list-unstyled d-flex py-2">
+							<contact-item v-for="brand in brandList" v-bind:contact="brand" v-bind:key="brand.id"></contact-item>
+						</ul>
+					</div>
+					<div class="col-6 col-sm-4 offset-md-1 py-4 d-block d-md-none mx-auto text-center">
+						<h4 class="text-white">Contact Me</h4>
+						<ul class="list-unstyled d-flex px-2 py-2 mx-auto">
+							<contact-item v-for="brand in brandList" v-bind:contact="brand" v-bind:key="brand.id"></contact-item>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="./js/index.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	</body>
 </html>
