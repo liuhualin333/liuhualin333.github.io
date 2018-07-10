@@ -50,18 +50,12 @@
 						<h4 class="text-white">About Me</h4>
 						<p class="text-muted py-2">Diligent Programmer, Deep Learner, Travel Lover.</p>
 					</div>
-					<div class="col-6 col-sm-4 offset-md-1 py-4 d-none d-md-block">
-						<h4 class="text-white">Contact Me</h4>
-						<ul class="list-unstyled d-flex py-2">
-							<contact-item v-for="brand in brandList" v-bind:contact="brand" v-bind:key="brand.id"></contact-item>
-						</ul>
-					</div>
-					<div class="col-6 col-sm-4 offset-md-1 py-4 d-block d-md-none mx-auto text-center">
-						<h4 class="text-white">Contact Me</h4>
-						<ul class="list-unstyled d-flex px-2 py-2 mx-auto">
-							<contact-item v-for="brand in brandList" v-bind:contact="brand" v-bind:key="brand.id"></contact-item>
-						</ul>
-					</div>
+					<contact-block v-bind:type="largeContact">
+						<contact-item v-for="brand in brandList" v-bind:contact="brand" v-bind:key="brand.id"></contact-item>
+					</contact-block>
+					<contact-block v-bind:type="smallContact">
+						<contact-item v-for="brand in brandList" v-bind:contact="brand" v-bind:key="brand.id"></contact-item>
+					</contact-block>
 				</div>
 			</div>
 		</footer>
