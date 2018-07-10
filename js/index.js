@@ -44,8 +44,8 @@ var contactApp = new Vue({
 	data: {
 		name: "Hualin Liu",
 		itemList: [
-			{ id: 0, link: './cv.html', name:"Curriculum Vitae" },
-			{ id: 1, link: './blog.html', name:"Articles" }
+			{ id: 0, link: './pages/cv.html', name:"Curriculum Vitae" },
+			{ id: 1, link: './pages/blog.html', name:"Articles" }
 		]
 	}
 })
